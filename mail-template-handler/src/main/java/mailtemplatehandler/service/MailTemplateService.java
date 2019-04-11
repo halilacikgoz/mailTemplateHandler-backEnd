@@ -34,13 +34,22 @@ public class MailTemplateService {
 	}
 
 	public void addMailTemplate(MailTemplate mailTemplate) {
-
+		//System.out.println(mailTemplate.toString());
 		mailTemplateRepository.save(mailTemplate);
 
 	}
 
-	public List<MailTemplate> getMailTemplatesByMailId(int groupId,int mailId) {
-		
+	public List<MailTemplate> getMailTemplatesByMailId(int groupId, int mailId) {
+
 		return mailTemplateRepository.getMailTemplatesByMailId(groupId, mailId);
+	}
+
+	public void updateMailTemplates(List<MailTemplate> mailTemplateComponents) {
+
+		for (MailTemplate mailTemplate : mailTemplateComponents) {
+			mailTemplateRepository.save(mailTemplate);
+
+		}
+
 	}
 }

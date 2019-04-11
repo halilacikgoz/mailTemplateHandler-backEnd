@@ -29,10 +29,11 @@ public class MailTemplateController {
 		return mailTemplateService.getMailTemplateByGroupId(groupId);
 
 	}
-	
+
 	@GetMapping("/mailtypes/{group_id}/mailtemplates/{mail_id}/mailtemplates")
-	public List<MailTemplate> getMailTemplatesByMailId(@PathVariable(value = "group_id") int groupId,@PathVariable(value = "mail_id") int mailId) {
-		return mailTemplateService.getMailTemplatesByMailId(groupId,mailId);
+	public List<MailTemplate> getMailTemplatesByMailId(@PathVariable(value = "group_id") int groupId,
+			@PathVariable(value = "mail_id") int mailId) {
+		return mailTemplateService.getMailTemplatesByMailId(groupId, mailId);
 
 	}
 
@@ -43,8 +44,14 @@ public class MailTemplateController {
 	}
 
 	@PostMapping(value = "/mailtemplates")
-	public void addaddMailTemplate(@RequestBody MailTemplate mailTemplate) {
+	public void addMailTemplate(@RequestBody MailTemplate mailTemplate) {
 		mailTemplateService.addMailTemplate(mailTemplate);
+
+	}
+
+	@PostMapping(value = "/mailtemplates4")
+	public void updateMailTemplates(@RequestBody List<MailTemplate> mailTemplateComponents) {
+		mailTemplateService.updateMailTemplates(mailTemplateComponents);
 
 	}
 

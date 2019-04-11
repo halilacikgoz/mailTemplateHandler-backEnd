@@ -19,7 +19,7 @@ public class MailTypesService {
 
 	}
 
-	public MailType getMailType(int groupId) {
+	public MailType getMailTypeByGroupId(int groupId) {
 		
 		return (MailType) mailTypesRepository.getMailTypeByGroupId(groupId);
 	}

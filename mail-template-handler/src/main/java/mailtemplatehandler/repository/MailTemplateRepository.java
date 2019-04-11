@@ -18,4 +18,7 @@ public interface MailTemplateRepository extends CrudRepository<MailTemplate, Int
 	@Query(value = "SELECT * FROM mail_template where group_id = ?1 and mail_id =?2", nativeQuery = true)
 	List<MailTemplate> getMailTemplatesByMailId(Integer groupId, Integer mailId);
 
+	
+	//	@Query("select u from User u where u.firstname = :#{#customer.firstname}")			
+	//	List<User> findUsersByCustomersFirstname(@Param("customer") Customer customer);
 }

@@ -26,8 +26,8 @@ public class MailTypesController {
 	}
 	
 	@RequestMapping(value="mailtypes/{group_id}", method=RequestMethod.GET)
-	public MailType requestMethodName(@PathVariable(value = "group_id") int groupId) {
-		return mailTypesService.getMailType(groupId);
+	public MailType getMailTypeByGroupId(@PathVariable(value = "group_id") Integer groupId) {
+		return mailTypesService.getMailTypeByGroupId(groupId);
 	}
 	
 }
