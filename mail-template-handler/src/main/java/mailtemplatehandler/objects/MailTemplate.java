@@ -24,7 +24,7 @@ public class MailTemplate {
 	String value_;
 
 	String description;
-
+	
 	int parentRef;
 
 	int te_wpiid;
@@ -126,4 +126,6 @@ public class MailTemplate {
 	public void setMail_id(int mail_id) {
 		this.mail_id = mail_id;
 	}
-}
+} //e
+
+
