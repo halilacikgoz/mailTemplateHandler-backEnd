@@ -1,5 +1,6 @@
 package mailtemplatehandler.objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -18,7 +19,8 @@ public class MailTemplate {
 	private MailType mailtype;
 
 	String code;
-
+	
+	@Column(length = 6000)
 	String value_;
 
 	String description;
